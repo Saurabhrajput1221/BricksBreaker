@@ -83,25 +83,25 @@ public class Gameplay extends JPanel implements ActionListener, KeyListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // if (play) {
-        //     if (ballpoX <= 0) {
-        //         ballXdir = -ballXdir;
-        //     }
-        //     if (ballpoX >= 670) {
-        //         ballXdir = +ballXdir;
-        //     }
-        //     if (ballpoY <= 0) {
-        //         ballYdir = -ballYdir;
-        //     }
-        //     Rectangle ballRect = new Rectangle(ballpoX, ballpoY, 20, 20);
-        //     Rectangle pedalRect = new Rectangle(playerX, 550, 100, 8);
+        if (play) {
+            if (ballpoX <= 0) {
+                ballXdir = -ballXdir;
+            }
+            if (ballpoX >= 670) {
+                ballXdir = +ballXdir;
+            }
+            if (ballpoY <= 0) {
+                ballYdir = -ballYdir;
+            }
+            Rectangle ballRect = new Rectangle(ballpoX, ballpoY, 20, 20);
+            Rectangle pedalRect = new Rectangle(playerX, 550, 100, 8);
 
-        //     if (ballRect.intersects(pedalRect)) {
-        //         ballYdir += ballYdir;
-        //     }
-        //     ballpoX += ballpoX;
-        //     ballpoY += ballpoY;
-        // }
+            if (ballRect.intersects(pedalRect)) {
+                ballYdir += ballYdir;
+            }
+            ballpoX += ballpoX;
+            ballpoY += ballpoY;
+        }
         repaint();
 
     }
